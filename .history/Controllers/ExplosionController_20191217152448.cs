@@ -11,7 +11,7 @@ namespace ExplosionApi.Controllers
     [HttpGet("{number}")]
     public ActionResult<string> GetExplosion(string s)
     {
-      return string.Join("", s.Select(c => new string(c, int.Parse(c.ToString()))));
+      return string.Join("", s.Select(i => new string(i, int.Parse(i.ToString()))));
     }
   }
 }
